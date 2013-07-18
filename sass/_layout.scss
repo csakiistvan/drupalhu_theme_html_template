@@ -1,0 +1,22 @@
+nav {
+  height: 100%;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+}
+
+.content {
+  margin: 0 auto;
+  max-width: 680px;
+  width: 55%;
+}
+
+.social-media {
+  bottom: 20px;
+  font-size: 1.8em;
+  line-height: 2em;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+}

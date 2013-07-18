@@ -1,0 +1,93 @@
+@import "compass/css3";
+
+body {
+  background-color: $blue-body;
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+}
+
+nav {
+  background-color: $blue-100;
+  background-image: url("../img/nav-right-shadow.png");
+  background-repeat: repeat-y;
+  background-position: center right;
+  
+  .logo {
+    margin: $basemargin $basemargin 0 $basemargin;
+  }
+  
+  .nav-links {
+    margin: 83px 0 0 0;
+    padding: 0;
+    
+    li {
+      border-top: 1px solid #004870;
+      border-bottom: 1px solid #0A709F;
+      padding: 5px 0 5px $basemargin;
+
+      a {
+        padding:0 0 0 28px;
+        color: $white;
+        text-decoration: none;
+        background-image: url("../img/icon-sprite.svg");
+        background-repeat: no-repeat;
+      }
+      &:nth-child(1) a {
+        background-position: 0 -115px;
+      }
+      &:nth-child(2) a {
+        background-position: 3px -154px;
+      }
+      &:nth-child(3) a {
+        background-position: 0 -193px;
+      }
+      &:nth-child(4) a {
+        background-position: 0 -235px;
+      }
+      &:nth-child(5) a {
+        background-position: 3px -274px;
+      }
+      &:nth-child(6) a {
+        background-position: 0 -315px;
+      }
+    }
+  }
+  .social-media {
+    border-top: 1px solid #004870;
+    border-bottom: 1px solid #0A709F;
+    
+    .social-wrapper {
+      border-bottom: 1px solid #004870;
+      border-top: 1px solid #0A709F;
+      padding: $basemargin/2;
+      @include clearfix; 
+    }
+    a {
+      
+      &.icon {
+        background-image: url("../img/icon-sprite.svg");
+        background-repeat: no-repeat;
+        height: 20px;
+        margin: 0 $basemargin/2;
+        display: block;
+        float: left;
+      }
+      &.icon-facebook {
+        background-position: 0 0;
+        width: 10px
+      }
+      &.icon-twitter {
+        background-position: 0 -36px;
+        width: 18px;
+      }
+      &.icon-rss {
+        background-position: 0 -72px;
+        width: 18px;
+      }
+    }
+  }
+}
+.hidetext {
+  @include texthidden;
+}
