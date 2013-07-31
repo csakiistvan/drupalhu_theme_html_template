@@ -18,13 +18,13 @@ nav {
   }
   
   .nav-links {
-    margin: 83px 0 0 0;
+    margin: 73px 0 0 0;
     padding: 0;
     
     li {
       border-top: 1px solid #004870;
       border-bottom: 1px solid #0A709F;
-      padding: 5px 0 5px $basemargin;
+      padding: 7px 0 7px $basemargin;
 
       a {
         padding:0 0 0 28px;
@@ -90,4 +90,62 @@ nav {
 }
 .hidetext {
   @include texthidden;
+}
+
+
+// big screen
+@media all and (min-width: 1340px) {
+  
+  nav {
+    .logo {
+      img {
+        width:190px; 
+      }
+    }
+    .nav-links li {
+  
+      a {
+        font-size: $base-font-size + 2;
+      }
+  
+      &:nth-child(1) a {
+        background-position: 0 -112px;
+      }
+      &:nth-child(2) a {
+        background-position: 3px -151px;
+      }
+      &:nth-child(3) a {
+        background-position: 0 -190px;
+      }
+      &:nth-child(4) a {
+        background-position: 0 -232px;
+      }
+      &:nth-child(5) a {
+        background-position: 3px -271px;
+      }
+      &:nth-child(6) a {
+        background-position: 0 -312px;
+      }
+    }
+  }
+}
+// normal screen
+@media all and (min-width: 1000px) and (max-width: 1339px) {
+
+}
+// tablet and small screen
+@media all and (min-width: 600px) and (max-width: 999px) {
+
+}
+// landscape ipad tablet
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape) {
+
+}
+// mobile device
+@media all and (max-width: 599px) {
+
+}
+// iPhone 4, 4S Retina landscape
+@media only screen and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+
 }
