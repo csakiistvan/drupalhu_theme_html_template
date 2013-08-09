@@ -7,7 +7,7 @@ body {
   line-height: $base-line-height;
 }
 
-nav {
+#nav {
   background-color: $blue-100;
   background-image: url("../img/nav-right-shadow.png");
   background-repeat: repeat-y;
@@ -22,8 +22,6 @@ nav {
     padding: 0;
     
     li {
-      border-top: 1px solid #004870;
-      border-bottom: 1px solid #0A709F;
       padding: 7px 0 7px $basemargin;
 
       a {
@@ -53,38 +51,42 @@ nav {
       }
     }
   }
-  .social-media {
-    border-top: 1px solid #004870;
-    border-bottom: 1px solid #0A709F;
-    
-    .social-wrapper {
-      border-bottom: 1px solid #004870;
-      border-top: 1px solid #0A709F;
-      padding: $basemargin/2;
-      @include clearfix; 
+}
+#social {
+  margin: 0 auto;
+  
+  ul {
+  	list-style: none;
+  	padding-top: 20px;
+  	text-align: center;
+  	width: 100%;
+  	margin: 0;
+  	padding: 0;
+  	
+    li {
+      display: inline-block;
     }
+  }
     a {
-      
-      &.icon {
-        background-image: url("../img/icon-sprite.svg");
-        background-repeat: no-repeat;
-        height: 20px;
-        margin: 0 $basemargin/2;
-        display: block;
-        float: left;
-      }
-      &.icon-facebook {
-        background-position: 0 0;
-        width: 10px
-      }
-      &.icon-twitter {
-        background-position: 0 -36px;
-        width: 18px;
-      }
-      &.icon-rss {
-        background-position: 0 -72px;
-        width: 18px;
-      }
+    
+    &.icon {
+      background-image: url("../img/icon-sprite.svg");
+      background-repeat: no-repeat;
+      height: 20px;
+      margin: 0 $basemargin/2;
+      display: block;
+    }
+    &.icon-facebook {
+      background-position: 0 0;
+      width: 10px
+    }
+    &.icon-twitter {
+      background-position: 0 -36px;
+      width: 18px;
+    }
+    &.icon-rss {
+      background-position: 0 -72px;
+      width: 18px;
     }
   }
 }
