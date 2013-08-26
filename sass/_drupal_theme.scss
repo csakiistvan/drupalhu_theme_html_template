@@ -62,6 +62,42 @@ body {
       }
     }
   }
+  
+  .search-block {
+    padding: 0 $basemargin;
+    position: relative;
+    padding-top: 6px;
+    padding-bottom: 5px;
+    @include box-shadow(0px 1px 0px $white-10);
+    border-bottom: 1px solid $black-25;
+    
+    .form-text {
+      border-top: 1px solid $blue-in-blue-50;
+      border-bottom: 1px solid $white-10;
+      border-left: 0;
+      border-right: 0;
+      height: 27px;
+      width: 180px;
+      background-color: $dark-blue;
+      padding: 1px 24px 1px 8px;
+      color: $white;
+      font-weight: 100;
+      font-style: italic;
+    }
+    .form-submit {
+      @include texthidden;
+      width: 16px;
+      height: 16px;
+      display: block;
+      background: url("../img/icon-sprite.svg") no-repeat scroll 0 -362px transparent;
+      border: 0;
+      cursor: pointer;
+      float: right;
+      position: absolute;
+      top: 14px;
+      left: 178px;
+    }
+  }
 }
 #social {
   margin: 0 auto;
