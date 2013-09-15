@@ -4,12 +4,17 @@ nav {
   position: fixed;
   top: 0;
   z-index: 100;
+  width: 17%;
 }
 
-.content {
-  margin: 0 auto;
-  max-width: 680px;
-  width: 55%;
+#content {
+  position: relative;
+  left: 0;
+  top: 0;
+  
+  #main-content {
+    margin-left: 17%;
+  }
 }
 
 .social-media {
