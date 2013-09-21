@@ -3,6 +3,15 @@ drupalhu_theme_html_template
 
 HTML alap a Drupal.hu sminkhez
 
-## Használata
+## Hasznï¿½lata
 
-* mivel a css fájlok nincsenek elkomittolva így szükséges a compass compile kiadása.
+* mivel a css fï¿½jlok nincsenek elkomittolva ï¿½gy szï¿½ksï¿½ges a compass compile kiadï¿½sa.
+
+
+## Zen-grids
+
+In this project we use the 'Zen-Grids' compass plugin for working with the
+layout. If you want to do adjustments to the layout, you will need Zen Grids.
+
+You can either install it as a Ruby gem or clone it from github.
+For more details on this, see '/sass-extensions/README.md'.
