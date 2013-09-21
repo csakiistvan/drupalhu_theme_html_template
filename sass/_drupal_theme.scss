@@ -106,8 +106,6 @@ body {
     background-color: $dark-blue;
   }
   i {
-    width: 50px;
-    height: 50px; 
     position: absolute; 
   }
   span.shadow {
@@ -126,12 +124,220 @@ body {
   @include texthidden;
 }
 
+i {
+  width: 50px;
+  height: 50px;
+  display: block;
+}
+
 section {
+  margin-left: 20px;
+  
   .pane-title {
     font-size: 42px;
     color: $white;
-    margin-left: 20px;
+    margin: 80px 0 40px 20px;
     font-weight: 400;
+    font-family: $notosans;
+  }
+}
+
+.node-tile {
+  width: 300px;
+  background-color: #fff;
+  margin: 0 5px 5px 0;
+  
+  .info {
+    height: 100px;
+    
+    .icon {
+      background-color: $tile-bg;
+    }
+    .count {
+      text-align: center;
+      display:block;
+      z-index: 5;
+      position: relative;
+      font-size: 11px;
+      font-weight: 700;
+      color: $white;
+    }
+  }
+  .user {
+    height: 50px;
+    width: 50px;
+    position: relative;
+  }
+  .text {
+    width: 250px;
+    display: table;
+    height: 100px;
+    
+    a {
+      display: table-cell;
+      vertical-align: middle;
+      font-size: 16px;
+      padding-left: 20px;
+      padding-right: 10px;
+      color: $tile-link;
+      
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+  .time {
+    line-height: 100%;
+    color: $white;
+    padding-top: 11px;
+    
+    span {
+      display: block;
+      text-align: center;
+      font-weight: 700;
+      
+      &.day {
+        font-size: 22px;
+        margin-bottom: 3px;
+      }
+      &.month {
+        font-size: 11px;
+        text-transform: uppercase;
+      }
+    }
+  }
+  &.node-forum {
+    
+    .icon {
+      padding-top: 13px;
+      
+      i {
+        background-image: url("../images/icon-sprite.svg");
+        background-repeat: no-repeat;
+        background-position: 12px -576px;
+        z-index: 0;
+        top: 0; 
+      }
+    }
+    .user {
+      background-color: $forum-orange;
+      
+      i {
+        background-image: url("../images/icon-sprite.svg");
+        background-repeat: no-repeat;
+        background-position: 12px -506px;
+      }
+    }
+  }
+  &.node-job {
+    
+    .icon {
+      padding-top: 13px;
+      
+      i {
+        background-image: url("../images/icon-sprite.svg");
+        background-repeat: no-repeat;
+        background-position: 12px -714px;
+        z-index: 0;
+        top: 0; 
+      }
+    }
+    .user {
+      background-color: $job-blue;
+      
+      i {
+        background-image: url("../images/icon-sprite.svg");
+        background-repeat: no-repeat;
+        background-position: 12px -506px;
+      }
+    }
+  }
+  &.node-add {
+    background-color: $node-add-light-green;
+    
+    .info .icon {
+      background-color: $node-add-dark-green;
+      
+      i {
+        background-image: url("../images/icon-sprite.svg");
+        background-repeat: no-repeat;
+        background-position: 13px -922px;
+        top: 0;
+      }
+    }
+    a {
+      color: $white;
+    }
+  }
+  &.node-esemeny {
+    
+    .icon {
+      padding-top: 13px;
+      
+      i {
+        background-image: url("../images/icon-sprite.svg");
+        background-repeat: no-repeat;
+        background-position: 12px -646px;
+        z-index: 0;
+        top: 0; 
+      }
+    }
+    .user {
+      background-color: $event-orange;
+      
+      i {
+        background-image: url("../images/icon-sprite.svg");
+        background-repeat: no-repeat;
+        background-position: 12px -506px;
+      }
+    }
+  }
+  &.node-news {
+    
+    .icon {
+      padding-top: 13px;
+      
+      i {
+        background-image: url("../images/icon-sprite.svg");
+        background-repeat: no-repeat;
+        background-position: 13px -787px;
+        z-index: 0;
+        top: 0; 
+      }
+    }
+    .user {
+      background-color: $dark-blue;
+      
+      i {
+        background-image: url("../images/icon-sprite.svg");
+        background-repeat: no-repeat;
+        background-position: 12px -506px;
+      }
+    }
+  }
+}
+
+article.more {
+  width: 100px;
+  height: 100px;
+  background-color: $node-add-light-green;
+  
+  .text {
+    padding: 0 15px 0 9px;
+    margin-top: 60px;
+    line-height: 120%;
+    background-image: url("../images/icon-sprite.svg");
+    background-repeat: no-repeat;
+    background-position: 75px -991px;
+
+    a {
+      color: $white;
+      line-height: 120%;
+      
+      &:hover {
+        text-decoration: none;
+      }
+    }
   }
 }
 
@@ -192,7 +398,16 @@ section {
     padding: 15px 10px 0 15px;
   }
 }
-
+footer {
+  color: $blue-body-50;
+  font-style: italic;
+  font-weight: 400;
+  padding: 80px 0 80px 20px;
+  
+  a {
+    color: $white;
+  }
+}
 // big screen
 @media all and (min-width: 1340px) {
   
