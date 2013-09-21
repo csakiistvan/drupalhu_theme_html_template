@@ -41,6 +41,7 @@ body {
         text-decoration: none;
         background-image: url("../images/icon-sprite.svg");
         background-repeat: no-repeat;
+        font-weight: 400;
       }
       &:nth-child(1) a {
         background-position: 0 -115px;
@@ -99,6 +100,7 @@ body {
     }
   }
 }
+
 #social {
   margin: 0 auto;
   
@@ -162,8 +164,18 @@ body {
     top: 0;    
   }
 }
+
 .hidetext {
   @include texthidden;
+}
+
+section {
+  .pane-title {
+    font-size: 42px;
+    color: $white;
+    margin-left: 20px;
+    font-weight: 400;
+  }
 }
 
 /**
@@ -171,13 +183,29 @@ body {
  */
 .flexslider {
   width: 605px;
+  
+  li {
+    position: relative;
+  }
+  .title {
+    position: absolute;
+    bottom: 0;
+    color: $white;
+    font-size: 26px;
+    max-width: 40%;
+    bottom: 20px;
+    left: 20px;
+    line-height: 120%;
+    font-weight: 400;
+  }
 }
+
 /**
  * top-links
  */
 .top-links {
   width: 300px;
-  margin-top: 50px;
+  margin-top: 46px;
   
   .link {
     background-color: $blue;
@@ -246,6 +274,9 @@ body {
 }
 // normal screen
 @media all and (min-width: 1000px) and (max-width: 1339px) {
+  section {
+    width: 910px;
+  }
 
 }
 // tablet and small screen
