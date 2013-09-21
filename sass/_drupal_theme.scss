@@ -1,0 +1,338 @@
+@import "compass/css3";
+
+body {
+  background-color: $blue-body;
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+}
+
+#nav {
+  background-color: $blue-100;
+  background-image: url("../images/right_shadow.png");
+  background-repeat: repeat-y;
+  background-position: center right;
+  
+  .logo {
+    margin: $basemargin $basemargin 0 $basemargin;
+  }
+  .badge {
+    background-color: $dark-blue;
+    @include border-radius(4px);
+    padding: 5px;
+    @include box-shadow(0px 2px 0px $white-10);
+  }
+  .nav-links {
+    margin: 73px 0 0 0;
+    padding: 0;
+    border-top: 1px solid $black-25;
+        
+    li {
+      padding: 7px $basemargin;
+      @include box-shadow(0px 1px 0px $white-10);
+      border-bottom: 1px solid $black-25;
+      
+      &:first-child {
+        border-top: 1px solid $white-10;
+      }
+      a {
+        padding:0 0 0 28px;
+        color: $white;
+        text-decoration: none;
+        background-image: url("../images/icon-sprite.svg");
+        background-repeat: no-repeat;
+        font-weight: 400;
+      }
+      &:nth-child(1) a {
+        background-position: 0 -115px;
+      }
+      &:nth-child(2) a {
+        background-position: 3px -154px;
+      }
+      &:nth-child(3) a {
+        background-position: 0 -193px;
+      }
+      &:nth-child(4) a {
+        background-position: 0 -235px;
+      }
+      &:nth-child(5) a {
+        background-position: 3px -274px;
+      }
+      &:nth-child(6) a {
+        background-position: 0 -315px;
+      }
+    }
+  }
+  
+  .search-block {
+    padding: 0 $basemargin;
+    position: relative;
+    padding-top: 6px;
+    padding-bottom: 5px;
+    @include box-shadow(0px 1px 0px $white-10);
+    border-bottom: 1px solid $black-25;
+    
+    .form-text {
+      border-top: 1px solid $blue-in-blue-50;
+      border-bottom: 1px solid $white-10;
+      border-left: 0;
+      border-right: 0;
+      height: 27px;
+      width: 101%;
+      background-color: $dark-blue;
+      padding: 1px 24px 1px 8px;
+      color: $white;
+      font-weight: 100;
+      font-style: italic;
+    }
+    .form-submit {
+      @include texthidden;
+      width: 16px;
+      height: 16px;
+      display: block;
+      background: url("../images/icon-sprite.svg") no-repeat scroll 0 -362px transparent;
+      border: 0;
+      cursor: pointer;
+      float: right;
+      position: absolute;
+      top: 13px;
+      left: 81%;
+    }
+  }
+}
+
+#social {
+  margin: 0 auto;
+  
+  ul {
+  	list-style: none;
+  	padding-top: 20px;
+  	text-align: center;
+  	width: 100%;
+  	margin: 0;
+  	padding: 0;
+  	
+    li {
+      display: inline-block;
+    }
+  }
+    a {
+    
+    &.icon {
+      background-image: url("../images/icon-sprite.svg");
+      background-repeat: no-repeat;
+      height: 20px;
+      margin: 0 $basemargin/2;
+      display: block;
+    }
+    &.icon-facebook {
+      background-position: 0 0;
+      width: 10px
+    }
+    &.icon-twitter {
+      background-position: 0 -36px;
+      width: 18px;
+    }
+    &.icon-rss {
+      background-position: 0 -72px;
+      width: 18px;
+    }
+  }
+}
+
+.tile {
+  width: 50px;
+  height: 50px;
+  position: relative;
+  
+  &.tile-dark-blue {
+    background-color: $dark-blue;
+  }
+  i {
+    position: absolute; 
+  }
+}
+
+span.shadow {
+  background-image: url("../images/right_shadow.png");
+  background-repeat: repeat-y;
+  background-position: top right;
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  display: block;
+  top: 0;    
+}
+
+.hidetext {
+  @include texthidden;
+}
+
+i {
+  width: 50px;
+  height: 50px;
+  display: block;
+}
+
+section {
+  .pane-title {
+    font-size: 42px;
+    color: $white;
+    margin-left: 20px;
+    font-weight: 400;
+  }
+}
+.node-tile {
+  width: 300px;
+  background-color: #fff;
+  
+  .info {
+    height: 100px;
+  }
+  .user {
+    height: 50px;
+    width: 50px;
+    position: relative;
+  }
+  .text {
+    width: 250px;
+  }
+  &.node-forum {
+    
+    .icon {
+      i {
+        background-image: url("../images/icon-sprite.svg");
+        background-repeat: no-repeat;
+        background-position: 12px -576px;        
+      }
+    }
+    .user {
+      //background-color: $orange;
+      background-color: red;
+      
+      i {
+        background-image: url("../images/icon-sprite.svg");
+        background-repeat: no-repeat;
+        background-position: 12px -506px;
+      }
+    }
+  }
+}
+
+/**
+ * flexslider
+ */
+.flexslider {
+  width: 605px;
+  
+  li {
+    position: relative;
+  }
+  .title {
+    position: absolute;
+    bottom: 0;
+    color: $white;
+    font-size: 26px;
+    max-width: 40%;
+    bottom: 20px;
+    left: 20px;
+    line-height: 120%;
+    font-weight: 400;
+  }
+}
+
+/**
+ * top-links
+ */
+.top-links {
+  width: 300px;
+  margin-top: 46px;
+  
+  .link {
+    background-color: $blue;
+    margin-bottom: 5px;
+    
+    a {
+      color: $white;
+      font-family: $notosans;
+      font-size: $base-font-size + 2;      
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+    &:nth-child(2) i {
+      background-image: url("../images/icon-sprite.svg");
+      background-repeat: no-repeat;
+      background-position: 15px -393px;
+    }
+    &:nth-child(3) i {
+      background-image: url("../images/icon-sprite.svg");
+      background-repeat: no-repeat;
+      background-position: 14px -451px;      
+    }
+  }
+  .text {
+    padding: 15px 10px 0 15px;
+  }
+}
+
+// big screen
+@media all and (min-width: 1340px) {
+  
+  nav {
+    .logo {
+      img {
+        width:190px; 
+      }
+    }
+    .nav-links li {
+  
+      a {
+        font-size: $base-font-size + 2;
+      }
+  
+      &:nth-child(1) a {
+        background-position: 0 -112px;
+      }
+      &:nth-child(2) a {
+        background-position: 3px -151px;
+      }
+      &:nth-child(3) a {
+        background-position: 0 -190px;
+      }
+      &:nth-child(4) a {
+        background-position: 0 -232px;
+      }
+      &:nth-child(5) a {
+        background-position: 3px -271px;
+      }
+      &:nth-child(6) a {
+        background-position: 0 -312px;
+      }
+    }
+  }
+}
+// normal screen
+@media all and (min-width: 1000px) and (max-width: 1339px) {
+  section {
+    width: 910px;
+  }
+
+}
+// tablet and small screen
+@media all and (min-width: 600px) and (max-width: 999px) {
+
+}
+// landscape ipad tablet
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape) {
+
+}
+// mobile device
+@media all and (max-width: 599px) {
+
+}
+// iPhone 4, 4S Retina landscape
+@media only screen and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+
+}
