@@ -1,6 +1,12 @@
+// -----------------------------------------------------------------------------
+// Sass setup.
+
 $legacy-support-for-ie6: false;
 $legacy-support-for-ie7: false;
 $legacy-support-for-ie8: true;
+
+// -----------------------------------------------------------------------------
+// Typography.
 
 $base-font-size:   14px; // The font size set on the root html element.
 $base-line-height: 24px; // This line-height determines the basic unit of vertical rhythm.
@@ -32,9 +38,9 @@ $base-font-family: $notosans; // The font family set on the html element.
 $font-body:        $notosans;
 $font-monospace:   $courier;
 
-//
-// Colors, etc.
-//
+// -----------------------------------------------------------------------------
+// Project palette.
+
 $white: #fff;
 $blue-100: #005E98;
 $blue-in-blue-50: #002637;
@@ -55,14 +61,35 @@ $node-add-dark-green: #699900;
 
 $white-10: #0A709F;
 $black-25: #004870;
+
+
+// -----------------------------------------------------------------------------
+// Breakpoints.
+// We planned 2 states: a 'full-width' one for desktop displays and a 'compact'
+// one for smaller devices.
+$screen-full-min: 865px;
+$screen-compact-max: 864px;
+
+
+// -----------------------------------------------------------------------------
+// Layout variables.
+
 // The amount lists, blockquotes and comments are indented.
 $indent-amount: 30px;
-
 // The height of the navigation container.
 $nav-height: 20px;
-
 // The base margin in site
 $basemargin: 20px;
+
+
+// -----------------------------------------------------------------------------
+// CSS3 defaults.
+
+// TODO: defining them.
+
+/*
+$default-border-radius: 4px;
+*/
 
 
 // =============================================================================
@@ -70,55 +97,13 @@ $basemargin: 20px;
 // =============================================================================
 
 @import "compass/support";  // Add Compass' IE and vendor prefix support variables.
-@import "compass/utilities/general/clearfix"; // Better than Drupal's clearfix.
-@import "compass/utilities/sprites"; // See http://compass-style.org/help/tutorials/spriting/
+@import "compass/layout";
+@import "compass/utilities"; // Better than Drupal's clearfix.
 @import "compass/css3";     // Use one CSS3 mixin instead of multiple vendor prefixes.
 @import "compass/typography/vertical_rhythm"; // Helps set up a vertical rhythm.
+@import "custom-mixins";
 
 // Zen Grids.
 // If you have cloned a copy of the lib into '/sass-extensions', include it
 // here.
 // @import "zen";
-
-
-// =============================================================================
-// Custom sass mixins
-// =============================================================================
-
-// Define the custom mixins for your project here.
-// http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#defining_a_mixin
-
-// element-invisible as defined by http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
-@mixin element-invisible {
-  position: absolute !important;
-  height: 1px;
-  width: 1px;
-  overflow: hidden;
-  @if $legacy-support-for-ie6 or $legacy-support-for-ie7 {
-    clip: rect(1px 1px 1px 1px); // IE6 and IE7 use the wrong syntax.
-  }
-  clip: rect(1px, 1px, 1px, 1px);
-}
-
-// Turns off the element-invisible effect.
-@mixin element-invisible-off {
-  position: static !important;
-  clip: auto;
-  height: auto;
-  width: auto;
-  overflow: auto;
-}
-
-@mixin element-focusable {
-  @include element-invisible;
-
-  &:active,
-  &:focus {
-    @include element-invisible-off;
-  }
-}
-
-@mixin texthidden {
-  text-indent: -9000em;
-  color: transparent;
-}

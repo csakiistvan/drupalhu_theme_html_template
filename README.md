@@ -6,10 +6,9 @@ HTML alap a Drupal.hu sminkhez
 ## Grafika
 https://dl.dropboxusercontent.com/u/743951/drupalhu/forrasanyagok/Drupal.hu_web_09.ai
 
-## Hasznalata
+## Használata
 
-* mivel a css fajlok nincsenek elkomittolva igy szukseges a compass compile kiadasa.
-
+* mivel a css fájlok nincsenek elkomittolva így szükséges a compass compile kiadása.
 
 ## Zen-grids
 
