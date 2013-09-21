@@ -3,9 +3,9 @@ drupalhu_theme_html_template
 
 HTML alap a Drupal.hu sminkhez
 
-## Haszn�lata
+## Használata
 
-* mivel a css f�jlok nincsenek elkomittolva �gy sz�ks�ges a compass compile kiad�sa.
+* mivel a css fájlok nincsenek elkomittolva így szükséges a compass compile kiadása.
 
 
 ## Zen-grids
