@@ -187,6 +187,7 @@ section {
     color: $white;
     margin: 80px 0 40px 20px;
     font-weight: 400;
+    font-family: $notosans;
   }
 }
 
@@ -446,7 +447,16 @@ article.more {
     padding: 15px 10px 0 15px;
   }
 }
-
+footer {
+  color: $blue-body-50;
+  font-style: italic;
+  font-weight: 400;
+  padding: 80px 0 80px 20px;
+  
+  a {
+    color: $white;
+  }
+}
 // big screen
 @media all and (min-width: 1340px) {
   
