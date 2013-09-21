@@ -237,10 +237,21 @@ section {
   .time {
     line-height: 100%;
     color: $white;
+    padding-top: 11px;
     
     span {
       display: block;
       text-align: center;
+      font-weight: 700;
+      
+      &.day {
+        font-size: 22px;
+        margin-bottom: 3px;
+      }
+      &.month {
+        font-size: 11px;
+        text-transform: uppercase;
+      }
     }
   }
   &.node-forum {
