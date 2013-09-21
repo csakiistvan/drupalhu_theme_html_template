@@ -12,6 +12,9 @@ body {
   line-height: $base-line-height;
 }
 
+.animate {
+ 	@include transition(all 0.4s);
+}
 #nav {
   background-color: $blue-100;
   background-image: url("../images/right_shadow.png");
@@ -212,7 +215,8 @@ section {
       color: $white;
     }
   }
-  .user {
+  .user,
+  .date {
     height: 50px;
     width: 50px;
     position: relative;
@@ -227,8 +231,9 @@ section {
       vertical-align: middle;
       font-size: 16px;
       padding-left: 20px;
-      padding-right: 10px;
+      padding-right: 20px;
       color: $tile-link;
+      line-height: 120%;
       
       &:hover {
         text-decoration: none;
@@ -300,6 +305,7 @@ section {
         background-position: 12px -506px;
       }
     }
+    .date {background-color: $dark-blue;}
   }
   &.node-add {
     background-color: $node-add-light-green;
@@ -340,6 +346,7 @@ section {
         background-position: 12px -506px;
       }
     }
+    .date {background-color: $event-orange;}
   }
   &.node-news {
     
@@ -361,6 +368,70 @@ section {
         background-image: url("../images/icon-sprite.svg");
         background-repeat: no-repeat;
         background-position: 12px -506px;
+      }
+    }
+    .date {background-color: $dark-blue;}
+  }
+  &.node-link {
+    overflow: hidden;
+    
+    .date {
+      background-color: $blue;
+    }
+    .icon {
+      i {
+        background-image: url("../images/icon-sprite.svg");
+        background-repeat: no-repeat;
+        background-position: 12px -865px;
+        z-index: 0;
+        top: 0;
+      }
+    }
+    .like {
+      padding-top: 13px;
+      background-color: $blue-light;
+      
+      .count {
+        color: $dark-blue;
+      }
+      i {
+        background-image: url("../images/icon-sprite.svg");
+        background-repeat: no-repeat;
+        background-position: 10px -1042px;
+        z-index: 0;
+        top: 0;
+      }
+    }
+    .link-content {
+      height: 200px;
+      display: block;
+      width: 250px;
+      position: relative;
+      
+      .content {
+        position: absolute;
+      }
+      .title {
+        padding: 16px 10px;
+        line-height: 120%;
+        background-color: $white;
+        
+        a {
+          color: $tile-link;
+          font-size: 16px;
+        }
+      }
+      .more-text {
+        padding: 10px;
+        background-color: rgba(255,255,255,0.8);
+        height: 200px;
+        
+        p {
+          margin: 0;
+        }
+      }
+      &:hover .content {
+        top: 0;
       }
     }
   }
@@ -444,7 +515,8 @@ article.more {
     }
   }
   .text {
-    padding: 15px 10px 0 15px;
+    padding: 17px 10px 0 15px;
+    line-height: 100%;
   }
 }
 footer {
