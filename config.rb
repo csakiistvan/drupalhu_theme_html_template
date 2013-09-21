@@ -1,13 +1,17 @@
 # Require any additional compass plugins here.
 
+# Zen Grids.
+
+# If you have installed Zen Grids as a gem, you can require it here.
+# require 'zen-grids'
 
 # Change this to :production when ready to deploy the CSS to the live server.
 environment = :development
 #environment = :production
 
 # In development, we can turn on the FireSass-compatible debug_info.
-firesass = false
-#firesass = true
+#firesass = false
+firesass = true
 
 # Set this to the root of your project when deployed:
 http_path = "/"
@@ -15,6 +19,7 @@ css_dir = "css"
 sass_dir = "sass"
 images_dir = "img"
 javascripts_dir = "javascripts"
+extensions_dir  = "sass-extensions"
 
 # You can select your preferred output style here (can be overridden via the command line):
 # output_style = :expanded or :nested or :compact or :compressed

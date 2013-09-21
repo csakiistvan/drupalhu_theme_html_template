@@ -1,3 +1,6 @@
 *.css
+.sass-cache
 !lib/bootstrap/css/*.css
 .DS_Store
+nbproject
+sass-extensions/zen-grids
