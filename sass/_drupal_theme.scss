@@ -9,7 +9,7 @@ body {
 
 #nav {
   background-color: $blue-100;
-  background-image: url("../img/nav-right-shadow.png");
+  background-image: url("../images/right_shadow.png");
   background-repeat: repeat-y;
   background-position: center right;
   
@@ -39,7 +39,7 @@ body {
         padding:0 0 0 28px;
         color: $white;
         text-decoration: none;
-        background-image: url("../img/icon-sprite.svg");
+        background-image: url("../images/icon-sprite.svg");
         background-repeat: no-repeat;
       }
       &:nth-child(1) a {
@@ -89,7 +89,7 @@ body {
       width: 16px;
       height: 16px;
       display: block;
-      background: url("../img/icon-sprite.svg") no-repeat scroll 0 -362px transparent;
+      background: url("../images/icon-sprite.svg") no-repeat scroll 0 -362px transparent;
       border: 0;
       cursor: pointer;
       float: right;
@@ -117,7 +117,7 @@ body {
     a {
     
     &.icon {
-      background-image: url("../img/icon-sprite.svg");
+      background-image: url("../images/icon-sprite.svg");
       background-repeat: no-repeat;
       height: 20px;
       margin: 0 $basemargin/2;
@@ -137,8 +137,75 @@ body {
     }
   }
 }
+
+.tile {
+  width: 50px;
+  height: 50px;
+  position: relative;
+  
+  &.tile-dark-blue {
+    background-color: $dark-blue;
+  }
+  i {
+    width: 50px;
+    height: 50px; 
+    position: absolute; 
+  }
+  span.shadow {
+    background-image: url("../images/right_shadow.png");
+    background-repeat: repeat-y;
+    background-position: top right;
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    display: block;
+    top: 0;    
+  }
+}
 .hidetext {
   @include texthidden;
+}
+
+/**
+ * flexslider
+ */
+.flexslider {
+  width: 605px;
+}
+/**
+ * top-links
+ */
+.top-links {
+  width: 300px;
+  margin-top: 50px;
+  
+  .link {
+    background-color: $blue;
+    margin-bottom: 5px;
+    
+    a {
+      color: $white;
+      font-family: $notosans;
+      font-size: $base-font-size + 2;      
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+    &:nth-child(2) i {
+      background-image: url("../images/icon-sprite.svg");
+      background-repeat: no-repeat;
+      background-position: 15px -393px;
+    }
+    &:nth-child(3) i {
+      background-image: url("../images/icon-sprite.svg");
+      background-repeat: no-repeat;
+      background-position: 14px -451px;      
+    }
+  }
+  .text {
+    padding: 15px 10px 0 15px;
+  }
 }
 
 // big screen
