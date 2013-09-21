@@ -3,6 +3,9 @@ drupalhu_theme_html_template
 
 HTML alap a Drupal.hu sminkhez
 
+## Grafika
+https://dl.dropboxusercontent.com/u/743951/drupalhu/forrasanyagok/Drupal.hu_web_09.ai
+
 ## Hasznalata
 
 * mivel a css fajlok nincsenek elkomittolva igy szukseges a compass compile kiadasa.
