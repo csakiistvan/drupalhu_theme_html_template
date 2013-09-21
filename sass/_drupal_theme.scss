@@ -15,63 +15,15 @@ body {
 .animate {
  	@include transition(all 0.4s);
 }
-#nav {
+#main-nav {
   background-color: $blue-100;
-  background-image: url("../images/right_shadow.png");
+  background-image: url("../images/main-nav-right-shadow.png");
   background-repeat: repeat-y;
   background-position: center right;
   
   .logo {
     margin: $basemargin $basemargin 0 $basemargin;
   }
-  .badge {
-    background-color: $dark-blue;
-    @include border-radius(4px);
-    padding: 5px;
-    @include box-shadow(0px 2px 0px $white-10);
-  }
-  .nav-links {
-    margin: 73px 0 0 0;
-    padding: 0;
-    border-top: 1px solid $black-25;
-        
-    li {
-      padding: 7px $basemargin;
-      @include box-shadow(0px 1px 0px $white-10);
-      border-bottom: 1px solid $black-25;
-      
-      &:first-child {
-        border-top: 1px solid $white-10;
-      }
-      a {
-        padding:0 0 0 28px;
-        color: $white;
-        text-decoration: none;
-        background-image: url("../images/icon-sprite.svg");
-        background-repeat: no-repeat;
-        font-weight: 400;
-      }
-      &:nth-child(1) a {
-        background-position: 0 -115px;
-      }
-      &:nth-child(2) a {
-        background-position: 3px -154px;
-      }
-      &:nth-child(3) a {
-        background-position: 0 -193px;
-      }
-      &:nth-child(4) a {
-        background-position: 0 -235px;
-      }
-      &:nth-child(5) a {
-        background-position: 3px -274px;
-      }
-      &:nth-child(6) a {
-        background-position: 0 -315px;
-      }
-    }
-  }
-  
   .search-block {
     padding: 0 $basemargin;
     position: relative;
@@ -159,17 +111,16 @@ body {
   i {
     position: absolute; 
   }
-}
-
-span.shadow {
-  background-image: url("../images/right_shadow.png");
-  background-repeat: repeat-y;
-  background-position: top right;
-  height: 50px;
-  width: 50px;
-  position: absolute;
-  display: block;
-  top: 0;    
+  span.shadow {
+    background-image: url("../images/main-nav-right-shadow.png");
+    background-repeat: repeat-y;
+    background-position: top right;
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    display: block;
+    top: 0;    
+  }
 }
 
 .hidetext {

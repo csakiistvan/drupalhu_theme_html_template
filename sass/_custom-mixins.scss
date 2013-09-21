@@ -1,0 +1,56 @@
+/**
+ * @file
+ * File scope: Custom mixins that we would like to use in the theme.
+ */
+
+// #############################################################################
+// Our Drupal theme's mixins.
+
+
+
+
+
+
+
+
+
+
+// #############################################################################
+// Mixins (presumably) brought over from Zen theme.
+
+// http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#defining_a_mixin
+
+// element-invisible as defined by http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+@mixin element-invisible {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  @if $legacy-support-for-ie6 or $legacy-support-for-ie7 {
+    clip: rect(1px 1px 1px 1px); // IE6 and IE7 use the wrong syntax.
+  }
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+// Turns off the element-invisible effect.
+@mixin element-invisible-off {
+  position: static !important;
+  clip: auto;
+  height: auto;
+  width: auto;
+  overflow: auto;
+}
+
+@mixin element-focusable {
+  @include element-invisible;
+
+  &:active,
+  &:focus {
+    @include element-invisible-off;
+  }
+}
+
+@mixin texthidden {
+  text-indent: -9000em;
+  color: transparent;
+}

@@ -5,13 +5,13 @@
 
 @import "base";
 
-nav {
+#main-nav {
   height: 100%;
   overflow: hidden;
   position: fixed;
   top: 0;
   z-index: 100;
-  width: 17%;
+  width: 220px;
 }
 
 #content {
@@ -20,7 +20,7 @@ nav {
   top: 0;
   
   #main-content {
-    margin-left: 17%;
+    margin-left: 220px;
   }
 }
 
@@ -31,29 +31,4 @@ nav {
   position: absolute;
   width: 100%;
   min-width: 100px;
-}
-
-// big screen
-@media all and (min-width: 1340px) {
-
-}
-// normal screen
-@media all and (min-width: 1000px) and (max-width: 1339px) {
-
-}
-// tablet and small screen
-@media all and (min-width: 600px) and (max-width: 999px) {
-
-}
-// landscape ipad tablet
-@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape) {
-
-}
-// mobile device
-@media all and (max-width: 599px) {
-
-}
-// iPhone 4, 4S Retina landscape
-@media only screen and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
-
 }
