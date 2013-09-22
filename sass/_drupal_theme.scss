@@ -44,6 +44,24 @@ body {
       color: $white;
       font-weight: 100;
       font-style: italic;
+      font-size: 13px;
+
+      &::-webkit-input-placeholder { /* WebKit browsers */
+        color: #fff;
+        opacity: 1;
+      }
+      &:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+        color: #fff;
+        opacity: 1;
+      }
+      &::-moz-placeholder { /* Mozilla Firefox 19+ */
+        color: #fff;
+        opacity: 1;
+      }
+      &:-ms-input-placeholder { /* Internet Explorer 10+ */
+        color: #fff;
+        opacity: 1;
+      }
     }
     .form-submit {
       @include texthidden;
@@ -139,8 +157,9 @@ section {
   .pane-title {
     font-size: 42px;
     color: $white;
-    margin: 80px 0 40px 20px;
+    margin: 74px 0 35px 16px;
     font-weight: 400;
+    line-height: 100%;
     font-family: $notosans;
   }
 }
@@ -208,6 +227,7 @@ section {
       padding-right: 20px;
       color: $tile-link;
       line-height: 120%;
+      font-style: normal;
       
       &:hover {
         text-decoration: none;
@@ -399,14 +419,14 @@ article.more {
   .text {
     padding: 0 15px 0 9px;
     margin-top: 60px;
-    line-height: 120%;
+    line-height: 110%;
     background-image: url("../images/icon-sprite.svg");
     background-repeat: no-repeat;
     background-position: 75px -991px;
 
     a {
       color: $white;
-      line-height: 120%;
+      font-style: normal;
       
       &:hover {
         text-decoration: none;
@@ -425,19 +445,24 @@ article.more {
   font-style: italic;
   font-size: 14px;
   font-weight: 400;
-  padding: 15px 0 40px 0;
+  padding: 15px 0 34px;
   
   a {
     color: $blue-body-50;
-  }  
+  }
+  & > li + li:before {
+    color: $white;
+    padding: 0;
+  }
 }
 
 #page-title {
   font-size: 42px;
   color: $white;
-  margin: 0 0 40px 20px;
+  margin: 0 0 33px 18px;
   font-weight: 400;
   font-family: $notosans;
+  max-width: 588px;
 }
 .page-header {
   border-bottom: 0;
@@ -560,10 +585,10 @@ article.node a {
     bottom: 0;
     color: $white;
     font-size: 26px;
-    max-width: 40%;
+    max-width: 45%;
     bottom: 20px;
     left: 20px;
-    line-height: 120%;
+    line-height: 115%;
     font-weight: 400;
   }
 }
@@ -608,10 +633,13 @@ footer {
   color: $blue-body-50;
   font-style: italic;
   font-weight: 400;
-  padding: 80px 0 80px 20px;
+  padding: 69px 0 69px 20px;
   
   a {
     color: $white;
+  }
+  p {
+    margin: 0;
   }
 }
 
@@ -643,7 +671,7 @@ footer {
   nav {
     .logo {
       img {
-        width:190px; 
+        width:180px; 
       }
     }
     .nav-links li {
@@ -676,7 +704,7 @@ footer {
 // normal screen
 @media all and (min-width: 1000px) and (max-width: 1339px) {
   section {
-    width: 910px;
+    width: 917px;
   }
 
 }
