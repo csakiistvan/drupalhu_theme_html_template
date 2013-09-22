@@ -1,6 +1,7 @@
 *.css
 .sass-cache
 !lib/bootstrap/css/*.css
+!css/flexslider.css
 .DS_Store
 nbproject
 sass-extensions/zen-grids
