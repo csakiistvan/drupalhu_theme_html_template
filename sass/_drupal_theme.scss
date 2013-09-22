@@ -656,10 +656,17 @@ footer {
   }
   .field-name-comment-body {
     background-color: $white;
-    padding: 16px 30px 16px 30px;
+    padding: 0 30px;
     margin-left: 50px;
     margin-bottom: 5px;
     min-height: 100px;
+    
+    p:first-child {
+      margin-top: 23px;
+    }
+    p:last-child {
+      margin-bottom: 23px;
+    }
   }
 }
 .indented {
