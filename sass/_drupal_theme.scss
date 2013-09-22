@@ -416,9 +416,51 @@ article.more {
 }
 
 /**
+ * breadcrumb
+ */
+.breadcrumb {
+  background-color: transparent;
+  margin: 0;
+  color: $white;
+  font-style: italic;
+  font-size: 14px;
+  font-weight: 400;
+  padding: 15px 0 40px 0;
+  
+  a {
+    color: $blue-body-50;
+  }  
+}
+
+#page-title {
+  font-size: 42px;
+  color: $white;
+  margin: 0 0 40px 20px;
+  font-weight: 400;
+  font-family: $notosans;
+}
+.page-header {
+  border-bottom: 0;
+  margin: 0;
+  padding-bottom: 0;
+}
+.node-right {
+  width: 555px;
+  background-color: $white;
+  padding: 16px 30px 30px 30px;
+}
+
+.field {
+  .field-label {
+    font-weight: 700;
+  }
+}
+/**
  * Node event page
  */
 .node {
+  color: $text-color;
+  
   .infos {
     i {
       background-image: url("../images/icon-sprite.svg");
@@ -460,6 +502,9 @@ article.more {
       }
     }
   }
+  .field {
+    margin-bottom: 10px;
+  }
   &.node-esemeny {
     .date {
       background-color: $node-event-dark-orange;
@@ -496,6 +541,10 @@ article.more {
       background-color: $node-forum-lighter-orange;
     }
   }
+}
+article.node a {
+  font-style: italic;
+  color: $text-link;
 }
 /**
  * flexslider
@@ -565,6 +614,29 @@ footer {
     color: $white;
   }
 }
+
+/**
+ * comment
+ */
+#comments {
+  width: 606px;
+  margin-top: 5px;
+  
+  section {
+    margin-left: 0;
+  }
+  .field-name-comment-body {
+    background-color: $white;
+    padding: 16px 30px 16px 30px;
+    margin-left: 50px;
+    margin-bottom: 5px;
+    min-height: 100px;
+  }
+}
+.indented {
+  margin-left: 50px;
+}
+
 // big screen
 @media all and (min-width: 1340px) {
   
