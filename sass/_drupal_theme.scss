@@ -88,7 +88,8 @@ body {
   	text-align: center;
   	width: 100%;
   	margin: 0;
-  	padding: 0;
+  	padding: 11px 0 0 0;
+  	background: url("../images/social_bg.png") repeat-x scroll 0 0 transparent;
   	
     li {
       display: inline-block;
@@ -108,7 +109,7 @@ body {
       width: 10px
     }
     &.icon-twitter {
-      background-position: 0 -36px;
+      background-position: 0 -34px;
       width: 18px;
     }
     &.icon-rss {
