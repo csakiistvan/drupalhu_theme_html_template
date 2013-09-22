@@ -145,6 +145,29 @@ section {
   }
 }
 
+// date style
+.time {
+  line-height: 100%;
+  color: $white;
+  padding-top: 11px;
+  
+  span {
+    display: block;
+    text-align: center;
+    font-weight: 700;
+    
+    &.day {
+      font-size: 22px;
+      margin-bottom: 3px;
+    }
+    &.month {
+      font-size: 11px;
+      text-transform: uppercase;
+    }
+  }
+}
+
+
 .node-tile {
   width: 300px;
   background-color: #fff;
@@ -188,26 +211,6 @@ section {
       
       &:hover {
         text-decoration: none;
-      }
-    }
-  }
-  .time {
-    line-height: 100%;
-    color: $white;
-    padding-top: 11px;
-    
-    span {
-      display: block;
-      text-align: center;
-      font-weight: 700;
-      
-      &.day {
-        font-size: 22px;
-        margin-bottom: 3px;
-      }
-      &.month {
-        font-size: 11px;
-        text-transform: uppercase;
       }
     }
   }
@@ -412,6 +415,88 @@ article.more {
   }
 }
 
+/**
+ * Node event page
+ */
+.node {
+  .infos {
+    i {
+      background-image: url("../images/icon-sprite.svg");
+      background-repeat: no-repeat;
+    }
+    .date {
+      background-color: $node-dark-blue;
+    }
+    .comment-count {
+      background-color: $node-blue;
+      padding-top: 13px;
+      
+      i {
+        top: 0;
+        background-position: 13px -1101px;
+      }    
+      .count {
+        text-align: center;
+        display:block;
+        z-index: 5;
+        position: relative;
+        font-size: 11px;
+        font-weight: 700;
+        color: $node-blue;
+      }
+    }
+    .favourites {
+      background-color: $node-light-blue;
+      
+      i {
+        background-position: 12px -1163px;        
+      }
+    }
+    .share {
+      background-color: $node-lighter-blue;
+
+      i {
+        background-position: 13px -1223px;        
+      }
+    }
+  }
+  &.node-esemeny {
+    .date {
+      background-color: $node-event-dark-orange;
+    }
+    .comment-count {
+      background-color: $node-event-orange;
+      
+      .count {
+        color: $node-event-dark-orange;
+      }
+    }
+    .favourites {
+      background-color: $node-event-light-orange;
+    }
+    .share {
+      background-color: $node-event-lighter-orange;
+    }
+  }
+  &.node-forum {
+    .date {
+      background-color: $node-forum-dark-orange;
+    }
+    .comment-count {
+      background-color: $node-forum-orange;
+      
+      .count {
+        color: $node-forum-dark-orange;
+      }
+    }
+    .favourites {
+      background-color: $node-forum-light-orange;
+    }
+    .share {
+      background-color: $node-forum-lighter-orange;
+    }
+  }
+}
 /**
  * flexslider
  */
